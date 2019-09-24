@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StudentRatingTableApp.v1._0.Models
+{
+    public class GroupsAVGModel
+    {
+        public string GroupName { get; set; }
+        public int GroupResult { get; set; }
+
+        public override string ToString()
+        {
+            return GroupName + "  " + Convert.ToString(GroupResult);
+        }
+    }
+}

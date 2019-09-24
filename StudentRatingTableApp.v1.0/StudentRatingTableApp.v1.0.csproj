@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5FA2334-4D4D-4718-B883-4E873D505104}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StudentRatingTableApp.v1._0</RootNamespace>
+    <AssemblyName>StudentRatingTableApp.v1.0</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AddingForms\AddGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddingForms\AddGroup.Designer.cs">
+      <DependentUpon>AddGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddingForms\AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddingForms\AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddingForms\StudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddingForms\StudentsForm.Designer.cs">
+      <DependentUpon>StudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\FacultiesRating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\FacultiesRating.Designer.cs">
+      <DependentUpon>FacultiesRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\GroupsForFaculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\GroupsForFaculty.Designer.cs">
+      <DependentUpon>GroupsForFaculty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\GroupsRating\GroupsRatingForFaculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\GroupsRating\GroupsRatingForFaculty.Designer.cs">
+      <DependentUpon>GroupsRatingForFaculty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\GroupsRating\GroupsRatingForProfession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\GroupsRating\GroupsRatingForProfession.Designer.cs">
+      <DependentUpon>GroupsRatingForProfession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\GroupsRating\GroupsRatingForUniversity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\GroupsRating\GroupsRatingForUniversity.Designer.cs">
+      <DependentUpon>GroupsRatingForUniversity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\ProfessionsRating\ProfessionsRatingForFaculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\ProfessionsRating\ProfessionsRatingForFaculty.Designer.cs">
+      <DependentUpon>ProfessionsRatingForFaculty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\ProfessionsRating\ProfessionsRatingForUniversity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\ProfessionsRating\ProfessionsRatingForUniversity.Designer.cs">
+      <DependentUpon>ProfessionsRatingForUniversity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\RatingForUniversityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\RatingForUniversityForm.Designer.cs">
+      <DependentUpon>RatingForUniversityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RatingMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RatingMainForm.Designer.cs">
+      <DependentUpon>RatingMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\StudentRatingForFaculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\StudentRatingForFaculty.Designer.cs">
+      <DependentUpon>StudentRatingForFaculty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\StudentRatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\StudentRatingForm.Designer.cs">
+      <DependentUpon>StudentRatingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\StudentRatingForProfession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReytingForms\StudentRatingForProfession.Designer.cs">
+      <DependentUpon>StudentRatingForProfession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Methods\Reverge.cs" />
+    <Compile Include="Models\FacCombo.cs" />
+    <Compile Include="Models\FacDepCombo.cs" />
+    <Compile Include="Models\Faculty.cs" />
+    <Compile Include="Models\FacultyRatingModel.cs" />
+    <Compile Include="Models\FinishResult.cs" />
+    <Compile Include="Models\Group.cs" />
+    <Compile Include="Models\GroupInfo.cs" />
+    <Compile Include="Models\GroupsAVGModel.cs" />
+    <Compile Include="Models\ModelsSet\AddPoint.cs" />
+    <Compile Include="Models\ModelsSet\AddStudentModel.cs" />
+    <Compile Include="Models\ModelsSet\Comboitem.cs" />
+    <Compile Include="Models\ModelsSet\DepartmentModel.cs" />
+    <Compile Include="Models\ModelsSet\DpPrfCombo.cs" />
+    <Compile Include="Models\ModelsSet\FacDpCombo.cs" />
+    <Compile Include="Models\ModelsSet\NewGroup.cs" />
+    <Compile Include="Models\ModelsSet\StudentModel.cs" />
+    <Compile Include="Models\ModelsSet\SubjectCombo.cs" />
+    <Compile Include="Models\ModelsSet\Subjects.cs" />
+    <Compile Include="Models\ModelsSet\PrfGrpCombo.cs" />
+    <Compile Include="Models\ProfessionsRatingModel.cs" />
+    <Compile Include="Models\StudentName.cs" />
+    <Compile Include="Models\ProfessionModel.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentsPountsForFaculty.cs" />
+    <Compile Include="Models\StudentsRating.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddingForms\AddGroup.resx">
+      <DependentUpon>AddGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddingForms\AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddingForms\StudentsForm.resx">
+      <DependentUpon>StudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReytingForms\FacultiesRating.resx">
+      <DependentUpon>FacultiesRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReytingForms\GroupsForFaculty.resx">
+      <DependentUpon>GroupsForFaculty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReytingForms\GroupsRating\GroupsRatingForFaculty.resx">
+      <DependentUpon>GroupsRatingForFaculty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReytingForms\GroupsRating\GroupsRatingForProfession.resx">
+      <DependentUpon>GroupsRatingForProfession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReytingForms\GroupsRating\GroupsRatingForUniversity.resx">
+      <DependentUpon>GroupsRatingForUniversity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReytingForms\ProfessionsRating\ProfessionsRatingForFaculty.resx">
+      <DependentUpon>ProfessionsRatingForFaculty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReytingForms\ProfessionsRating\ProfessionsRatingForUniversity.resx">
+      <DependentUpon>ProfessionsRatingForUniversity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReytingForms\RatingForUniversityForm.resx">
+      <DependentUpon>RatingForUniversityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RatingMainForm.resx">
+      <DependentUpon>RatingMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReytingForms\StudentRatingForFaculty.resx">
+      <DependentUpon>StudentRatingForFaculty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReytingForms\StudentRatingForm.resx">
+      <DependentUpon>StudentRatingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReytingForms\StudentRatingForProfession.resx">
+      <DependentUpon>StudentRatingForProfession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2018-12-2414-38-06_5c20b69833588.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

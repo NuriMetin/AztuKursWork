@@ -20,7 +20,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
         }
         private void GroupsForFaculty_Load(object sender, EventArgs e)
         {
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
 
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
@@ -45,7 +45,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
                 }
 
                 //----------------- Faculty combobox on load ----------------------------
-                string facConnect = "Data Source=DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+                string facConnect = "Data Source=DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
                 List<Faculty> faculties = new List<Faculty>();
 
                 using (SqlConnection facConnection = new SqlConnection(facConnect))
@@ -96,7 +96,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
 
             List<FinishResult> finishResults = new List<FinishResult>();
 
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             using(SqlConnection sqlConnection=new SqlConnection(connection))
             {
                 sqlConnection.Open();
@@ -148,7 +148,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
             //string facValue = cmbx_faculty.SelectedValue.ToString();
             //string sesValue = cmbx_session.SelectedValue.ToString();
 
-            //string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            //string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             //using(SqlConnection sqlConnection=new SqlConnection)
             //{
             //    string query = "";

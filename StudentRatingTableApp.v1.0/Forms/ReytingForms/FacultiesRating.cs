@@ -21,7 +21,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
 
         private void FacultiesRating_Load(object sender, EventArgs e)
         {
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
 
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
@@ -51,7 +51,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
             string sesValue = cmbx_faculty.SelectedValue.ToString();
             List<FacultyRatingModel> facultyRatingModels = new List<FacultyRatingModel>();
 
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
                 sqlConnection.Open();

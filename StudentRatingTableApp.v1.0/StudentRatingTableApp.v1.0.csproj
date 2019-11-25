@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Extension.cs" />
     <Compile Include="Forms\AddingForms\AddGroup.cs">
       <SubType>Form</SubType>
     </Compile>

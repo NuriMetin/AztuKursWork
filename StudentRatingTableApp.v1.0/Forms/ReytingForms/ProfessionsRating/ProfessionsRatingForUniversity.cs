@@ -21,7 +21,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms.ProfessionsRating
 
         private void ProfessionsRatingForUniversity_Load(object sender, EventArgs e)
         {
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
 
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
@@ -52,7 +52,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms.ProfessionsRating
             string sesValue = cmbx_session.SelectedValue.ToString();
             List<ProfessionsRatingModel> professionsRatingModels = new List<ProfessionsRatingModel>();
 
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
                 sqlConnection.Open();

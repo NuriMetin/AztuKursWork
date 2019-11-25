@@ -12,7 +12,6 @@ using StudentRatingTableApp.v1._0.Models;
 using StudentRatingTableApp.v1._0.Forms;
 using StudentRatingTableApp.v1._0.Forms.AddingForms;
 using StudentRatingTableApp.v1._0.Forms.ReytingForms;
-using StudentRatingTableApp.v1._0.Forms.AddingForms;
 using StudentRatingTableApp.v1._0.Forms.ReytingForms.GroupsRating;
 using StudentRatingTableApp.v1._0.Forms.ReytingForms.ProfessionsRating;
 namespace StudentRatingTableApp.v1._0.Forms

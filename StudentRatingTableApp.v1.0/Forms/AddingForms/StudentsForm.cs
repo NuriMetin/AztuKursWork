@@ -51,7 +51,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
             //grbx_subjects.Hide();
             #endregion
 
-            string facConnect = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string facConnect = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             List<Faculty> faculties = new List<Faculty>();
 
             using (SqlConnection facConnection = new SqlConnection(facConnect))
@@ -111,7 +111,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
    
             string PrValue = cmbx_profession.SelectedValue.ToString();
             List<Group> groups = new List<Group>();
-            string conString = "Data Source= DESKTOP-732SKG6;Initial Catalog=AZTU;Integrated Security=SSPI";
+            string conString = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS;Initial Catalog=AZTU;Integrated Security=SSPI";
             using (SqlConnection connection = new SqlConnection(conString))
             {
                 connection.Open();
@@ -165,7 +165,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
             string GrValue = cmbx_group.SelectedValue.ToString();
 
             List<Student> students = new List<Student>();
-            string conString = "Data Source= DESKTOP-732SKG6;Initial Catalog=AZTU;Integrated Security=SSPI";
+            string conString = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS;Initial Catalog=AZTU;Integrated Security=SSPI";
             using (SqlConnection connection = new SqlConnection(conString))
             {
                 connection.Open();
@@ -214,7 +214,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
 
 
 
-            string conString = "Data Source= DESKTOP-732SKG6;Initial Catalog=AZTU;Integrated Security=SSPI";
+            string conString = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS;Initial Catalog=AZTU;Integrated Security=SSPI";
 
 
             string SesQuery = "SELECT ID AS SesID, Name AS SesName FROM Sessions";
@@ -257,7 +257,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
 
             string sesValue = cmbx_session.SelectedValue.ToString();
             List<Subjects> subjects = new List<Subjects>();
-            string conString = "Data Source= DESKTOP-732SKG6;Initial Catalog=AZTU;Integrated Security=SSPI";
+            string conString = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS;Initial Catalog=AZTU;Integrated Security=SSPI";
             using (SqlConnection connection = new SqlConnection(conString))
             {
                 connection.Open();
@@ -332,7 +332,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
 
                 int resultPount = enterPount + examPount;
 
-                string connectionString = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+                string connectionString = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
 
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
@@ -377,7 +377,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
 
             List<FinishResult> allFinishResults = new List<FinishResult>();
 
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             string query = @"SELECT PR.ID AS PrID, PR.Name AS PrName FROM Professions AS PR
                         INNER JOIN Departments AS DP
                         ON PR.DepartmentID = DP.ID

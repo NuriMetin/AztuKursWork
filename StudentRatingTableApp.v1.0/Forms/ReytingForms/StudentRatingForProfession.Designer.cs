@@ -75,7 +75,7 @@
             this.cmbx_faculty.Name = "cmbx_faculty";
             this.cmbx_faculty.Size = new System.Drawing.Size(161, 21);
             this.cmbx_faculty.TabIndex = 8;
-            this.cmbx_faculty.SelectedIndexChanged += new System.EventHandler(this.cmbx_faculty_SelectedIndexChanged_1);
+            this.cmbx_faculty.SelectedIndexChanged += new System.EventHandler(this.cmbx_faculty_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -94,6 +94,7 @@
             this.cmbx_session.Name = "cmbx_session";
             this.cmbx_session.Size = new System.Drawing.Size(115, 21);
             this.cmbx_session.TabIndex = 6;
+            this.cmbx_session.SelectedIndexChanged += new System.EventHandler(this.Cmbx_session_SelectedIndexChanged);
             // 
             // dtgv_student_rating
             // 

@@ -21,7 +21,7 @@ namespace StudentRatingTableApp.v1._0.Forms
 
         private void RatingForUniversityForm_Load(object sender, EventArgs e)
         {
-            string conString = "Data Source= DESKTOP-732SKG6;Initial Catalog=AZTU;Integrated Security=SSPI";
+            string conString = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS;Initial Catalog=AZTU;Integrated Security=SSPI";
    
 
             string SesQuery = "SELECT ID AS SesID, Name AS SesName FROM Sessions";
@@ -54,7 +54,7 @@ namespace StudentRatingTableApp.v1._0.Forms
 
 
             List<FinishResult> allFinishResults = new List<FinishResult>();
-            string conString = "Data Source= DESKTOP-732SKG6;Initial Catalog=AZTU;Integrated Security=SSPI";
+            string conString = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS;Initial Catalog=AZTU;Integrated Security=SSPI";
             using (SqlConnection connection = new SqlConnection(conString))
             {
                 connection.Open();

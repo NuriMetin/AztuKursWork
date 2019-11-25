@@ -21,7 +21,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
 
         private void StudentRatingForFaculty_Load(object sender, EventArgs e)
         {
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
 
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
@@ -46,7 +46,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
                 }
 
                 //----------------- Faculty combobox on load ----------------------------
-                string facConnect = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+                string facConnect = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
                 List<Faculty> faculties = new List<Faculty>();
 
                 using (SqlConnection facConnection = new SqlConnection(facConnect))
@@ -104,7 +104,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
             string facValue = cmbx_faculty.SelectedValue.ToString();
 
             List<FinishResult> allFinishResults = new List<FinishResult>();
-            string conString = "Data Source= DESKTOP-732SKG6;Initial Catalog=AZTU;Integrated Security=SSPI";
+            string conString = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS;Initial Catalog=AZTU;Integrated Security=SSPI";
             using (SqlConnection connection = new SqlConnection(conString))
             {
                 connection.Open();

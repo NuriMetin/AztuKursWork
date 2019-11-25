@@ -29,12 +29,12 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
 
         private void StudentRatingForProfession_Load(object sender, EventArgs e)
         {
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
 
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
                 sqlConnection.Open();
-
+                
                 //--------------- Session combobox on load--------------------------
 
                 string sesQuery = " SELECT ID ,Name FROM Sessions";
@@ -54,7 +54,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
                 }
 
                 //----------------- Faculty combobox on load ----------------------------
-                string facConnect = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+                string facConnect = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
                 List<Faculty> faculties = new List<Faculty>();
 
                 using (SqlConnection facConnection = new SqlConnection(facConnect))
@@ -106,7 +106,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
 
             List<FinishResult> allFinishResults = new List<FinishResult>();
 
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             string query = @"SELECT PR.ID AS PrID, PR.Name AS PrName FROM Professions AS PR
                         INNER JOIN Departments AS DP
                         ON PR.DepartmentID = DP.ID
@@ -153,66 +153,12 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
             cmbx_profession.DataSource = comboitems;
         }
 
-        private void cmbx_faculty_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            string sesValue = cmbx_session.SelectedValue.ToString();
-            string facValue = cmbx_faculty.SelectedValue.ToString();
-            List<ProfessionModel> professionModels = new List<ProfessionModel>();
-
-            List<FinishResult> allFinishResults = new List<FinishResult>();
-
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
-            string query = @"SELECT PR.ID AS PrID, PR.Name AS PrName FROM Professions AS PR
-                        INNER JOIN Departments AS DP
-                        ON PR.DepartmentID = DP.ID
-                        INNER JOIN Faculties AS F
-                        ON F.ID = DP.FacultyID
-                        WHERE F.ID = " + facValue;
-            using (SqlConnection sqlConnection = new SqlConnection(connection))
-            {
-                sqlConnection.Open();
-                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
-                {
-                    using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
-                    {
-                        using (DataTable dataTable = new DataTable())
-                        {
-                            while (sqlDataReader.Read())
-                            {
-                                ProfessionModel professionModel = new ProfessionModel()
-                                {
-                                    ID = int.Parse(sqlDataReader["PrID"].ToString()),
-                                    Name = sqlDataReader["PrName"].ToString()
-                                };
-                                professionModels.Add(professionModel);
-                            }
-                        }
-                    }
-                }
-            }
-            List<Comboitem> comboitems = new List<Comboitem>();
-
-            for (int i = 0; i < professionModels.Count; i++)
-            {
-                Comboitem comboitem = new Comboitem()
-                {
-                    Id = professionModels[i].ID,
-                    Name = professionModels[i].Name
-
-                };
-                comboitems.Add(comboitem);
-
-            }
-            cmbx_profession.ValueMember = "ID";
-            cmbx_profession.DisplayMember = "Name";
-            cmbx_profession.DataSource = comboitems;
-        }
 
         private void cmbx_profession_SelectedIndexChanged(object sender, EventArgs e)
         {
             string sesValue = cmbx_session.SelectedValue.ToString();
             string prValue = cmbx_profession.SelectedValue.ToString();
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             List<FinishResult> finishResults = new List<FinishResult>();
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
@@ -250,6 +196,11 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms
                     }
                 }
             }
+
+        }
+
+        private void Cmbx_session_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

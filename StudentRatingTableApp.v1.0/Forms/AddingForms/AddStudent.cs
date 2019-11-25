@@ -21,12 +21,12 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
         }
         private void AddStudent_Load(object sender, EventArgs e)
         {
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
 
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
                 sqlConnection.Open();
-                string facConnect = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+                string facConnect = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
                 List<Faculty> faculties = new List<Faculty>();
 
                 using (SqlConnection facConnection = new SqlConnection(facConnect))
@@ -77,7 +77,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
 
             List<FinishResult> allFinishResults = new List<FinishResult>();
 
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             string query = @"SELECT PR.ID AS PrID, PR.Name AS PrName FROM Professions AS PR
                         INNER JOIN Departments AS DP
                         ON PR.DepartmentID = DP.ID
@@ -134,11 +134,10 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
 
             string PrValue = cmbx_profession.SelectedValue.ToString();
             List<Group> groups = new List<Group>();
-            string conString = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU;Integrated Security=SSPI";
+            string conString = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU;Integrated Security=SSPI";
             using (SqlConnection connection = new SqlConnection(conString))
             {
                 connection.Open();
-
 
                 string query = @"SELECT GR.ID AS [GroupID], GR.Name AS [GroupName], GR.ProfessionID AS [GroupProfessionName] FROM Professions AS PR
                             INNER JOIN Groups AS GR ON GR.ProfessionID = PR.ID WHERE GR.ProfessionID = " + PrValue;
@@ -151,18 +150,12 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
 
                             while (sqlDataReader.Read())
                             {
-
-                                //cmbx_group.DataSource = null;
-                                //cmbx_group.Items.Clear();
-
                                 Group group = new Group()
                                 {
                                     ID = int.Parse(sqlDataReader["GroupID"].ToString()),
-                                    Name = sqlDataReader["GroupName"].ToString(),
-                                    //ProfessionID = int.Parse(sqlDataReader["GroupProfessionName"].ToString())
+                                    Name = sqlDataReader["GroupName"].ToString(),                                   
                                 };
                                 groups.Add(group);
-
                             }
                         }
                     }
@@ -176,13 +169,9 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
                 comboitem.Name = groups[i].Name;
                 comboitems.Add(comboitem);
             }
-
             cmbx_group.ValueMember = "ID";
             cmbx_group.DisplayMember = "Name";
-            cmbx_group.DataSource = comboitems;
-            
-
-            
+            cmbx_group.DataSource = comboitems;     
         }
 
         private void cmbx_group_SelectedIndexChanged(object sender, EventArgs e)
@@ -196,7 +185,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
             {
                 string grValue = cmbx_group.SelectedValue.ToString();
 
-                string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+                string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
                 using (SqlConnection sqlConnection = new SqlConnection(connection))
                 {
                     sqlConnection.Open();

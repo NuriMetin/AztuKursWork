@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_student_rating)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             this.cmbx_faculty.Name = "cmbx_faculty";
             this.cmbx_faculty.Size = new System.Drawing.Size(121, 21);
             this.cmbx_faculty.TabIndex = 0;
+            this.cmbx_faculty.SelectedIndexChanged += new System.EventHandler(this.cmbx_faculty_SelectedIndexChanged);
             // 
             // cmbx_session
             // 
@@ -63,7 +65,7 @@
             this.cmbx_profession.Name = "cmbx_profession";
             this.cmbx_profession.Size = new System.Drawing.Size(121, 21);
             this.cmbx_profession.TabIndex = 2;
-            this.cmbx_profession.SelectedIndexChanged += new System.EventHandler(this.Cmbx_profession_SelectedIndexChanged_1);
+            this.cmbx_profession.SelectedIndexChanged += new System.EventHandler(this.cmbx_profession_SelectedIndexChanged);
             // 
             // cmbx_group
             // 
@@ -72,7 +74,7 @@
             this.cmbx_group.Name = "cmbx_group";
             this.cmbx_group.Size = new System.Drawing.Size(121, 21);
             this.cmbx_group.TabIndex = 3;
-            this.cmbx_group.SelectedIndexChanged += new System.EventHandler(this.Cmbx_group_SelectedIndexChanged_1);
+            this.cmbx_group.SelectedIndexChanged += new System.EventHandler(this.cmbx_group_SelectedIndexChanged);
             // 
             // dtgv_student_rating
             // 
@@ -123,11 +125,22 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Group";
             // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(855, 24);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(75, 31);
+            this.btn_back.TabIndex = 21;
+            this.btn_back.Text = "Geriyə";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // StudentRatingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 541);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -157,5 +170,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_back;
     }
 }

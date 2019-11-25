@@ -20,7 +20,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms.GroupsRating
         }
         private void GroupsRatingForFaculty_Load(object sender, EventArgs e)
         {
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
 
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
@@ -45,7 +45,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms.GroupsRating
                 }
 
                 //----------------- Faculty combobox on load ----------------------------
-                string facConnect = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+                string facConnect = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
                 List<Faculty> faculties = new List<Faculty>();
 
                 using (SqlConnection facConnection = new SqlConnection(facConnect))
@@ -96,7 +96,7 @@ namespace StudentRatingTableApp.v1._0.Forms.ReytingForms.GroupsRating
             string sesValue = cmbx_session.SelectedValue.ToString();
             List<GroupsAVGModel> groupsAVGModels = new List<GroupsAVGModel>();
 
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
                 sqlConnection.Open();

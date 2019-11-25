@@ -22,12 +22,12 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
 
         private void AddGroup_Load(object sender, EventArgs e)
         {
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
 
             using (SqlConnection sqlConnection = new SqlConnection(connection))
             {
                 sqlConnection.Open();
-                string facConnect = "Data Source=DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+                string facConnect = "Data Source=DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
                 List<Faculty> faculties = new List<Faculty>();
 
                 using (SqlConnection facConnection = new SqlConnection(facConnect))
@@ -76,7 +76,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
         {
             string facValue = cmbx_faculty.SelectedValue.ToString();
 
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             List<DepartmentModel> departmentModels = new List<DepartmentModel>();
             using(SqlConnection sqlConnection=new SqlConnection(connection))
             {
@@ -121,7 +121,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
             
             string dpValue = cmbx_department.SelectedValue.ToString();
 
-            string connection = "Data Source= DESKTOP-732SKG6; Initial Catalog=AZTU; Integrated Security=true;";
+            string connection = "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS; Initial Catalog=AZTU; Integrated Security=true;";
             List<ProfessionModel> professionModels = new List<ProfessionModel>();
             using(SqlConnection sqlConnection=new SqlConnection(connection))
             {
@@ -167,7 +167,7 @@ namespace StudentRatingTableApp.v1._0.Forms.AddingForms
             {
                 string prValue = cmbx_profession.SelectedValue.ToString();
                 
-                string connection= "Data Source= DESKTOP-732SKG6;; Initial Catalog=AZTU; Integrated Security=true;";
+                string connection= "Data Source= DESKTOP-A4JVK6F\\SQLEXPRESS;; Initial Catalog=AZTU; Integrated Security=true;";
                 using(SqlConnection sqlConnection=new SqlConnection(connection))
                 {
                     sqlConnection.Open();
